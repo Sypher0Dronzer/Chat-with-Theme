@@ -1,12 +1,12 @@
-import useGetConversations from "../../hooks/useGetConversations";
 import { getRandomEmoji } from "../../utills/emojis";
+import { useNewUsers } from "../../zustand/useNewUsers";
 import Conversation from "./Conversation";
 
 const Conversations = () => {	
-	const { loading, conversations } = useGetConversations();
+	const { loading, conversations} = useNewUsers();
 	return (
 		<div className='py-2 flex flex-col overflow-auto'>
-			{conversations.map((conversation, idx) => (
+			{conversations?.map((conversation, idx) => (
 				<Conversation
 					key={conversation._id}
 					conversation={conversation}

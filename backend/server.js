@@ -17,7 +17,7 @@ import { app, server } from "./socket/socket.js";
 
 
 const mongoStore = MongoStore.create({
-  mongoUrl: ENV_VARS.MONGO_LOCALDB, // Use the same database name
+  mongoUrl: ENV_VARS.MONGO_URI, // Use the same database name
   collectionName: "sessions", // Optional: Customize session collection name
 });
 
