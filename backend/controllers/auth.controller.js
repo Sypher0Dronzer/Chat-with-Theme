@@ -102,11 +102,11 @@ export async function signup(req, res) {
     // Use the extracted login logic
     try {
       const loginResult = await handleLogin(req, res);
-      return res.status(loginResult.status).json({
+      return res.status(loginResult.status).json({success:true,
         user: loginResult.user,
       });
     } catch (loginError) {
-      return res.status(loginError.status).json({
+      return res.status(loginError.status).json({success:false,
         message: loginError.message,
       });
     }

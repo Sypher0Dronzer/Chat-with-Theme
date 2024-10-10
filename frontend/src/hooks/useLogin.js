@@ -5,7 +5,7 @@ import { useAuthStore } from "../zustand/useAuthStore";
 
 const useLogin = () => {
   const [loading, setLoading] = useState(false);
-  const {authCheck}= useAuthStore()
+  const {loginUser}= useAuthStore()
   const login = async (email, password) => {
     setLoading(true);
     try {
@@ -23,7 +23,7 @@ const useLogin = () => {
       if (!data.success) {
         toast.error(data.message);
       } else {
-        authCheck()
+        loginUser(data)
         toast.success('Logged in Successfully')
       }
     } catch (error) {

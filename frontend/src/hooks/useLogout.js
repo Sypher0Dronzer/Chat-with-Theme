@@ -4,7 +4,7 @@ import { useAuthStore } from "../zustand/useAuthStore";
 
 const useLogout = () => {
   const [loading, setLoading] = useState(false);
-  const { authCheck } = useAuthStore();
+  const { logoutUser } = useAuthStore();
 
   const logout = async () => {
     setLoading(true);
@@ -17,9 +17,10 @@ const useLogout = () => {
       if (data.error) {
         throw new Error(data.error);
       }
-      authCheck();
-
-      toast.success("Successfully logged out");
+      if(data.success){
+        logoutUser()
+        toast.success(data.message)
+      }
     } catch (error) {
       toast.error(error.message);
     } finally {

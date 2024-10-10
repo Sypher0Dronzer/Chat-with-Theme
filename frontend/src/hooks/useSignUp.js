@@ -5,7 +5,7 @@ import { useAuthStore } from "../zustand/useAuthStore";
 const useSignup = () => {
 	const [loading, setLoading] = useState(false);
 
-	const {authCheck}= useAuthStore()
+	const {loginUser}= useAuthStore()
 
 	const signup = async ({ email, username, password, confirmPassword, gender }) => {
 		const success = handleInputErrors({ email, username, password, confirmPassword, gender });
@@ -23,7 +23,7 @@ const useSignup = () => {
 			if (data.error) {
 				throw new Error(data.error);
 			}
-			authCheck()
+			loginUser(data)
 			toast.success('User signed in!')
 		} catch (error) {
 			toast.error(error.message);

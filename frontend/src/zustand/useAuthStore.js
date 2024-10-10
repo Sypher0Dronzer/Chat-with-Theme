@@ -15,4 +15,10 @@ export const useAuthStore = create((set) => ({
       set({ isLoading: false });
     }
   },
+  logoutUser: ()=>{
+    set({user:null})
+  },
+  loginUser:(data)=>{
+    set({user:data})
+  }
 }));
