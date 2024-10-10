@@ -97,8 +97,8 @@ export async function signup(req, res) {
       profilePic: gender == "Male" ? boyProfilepic : girlProfilepic,
     });
 
-    await newUser.save();
     io.emit("newUser", newUser);
+    await newUser.save();
     // Use the extracted login logic
     try {
       const loginResult = await handleLogin(req, res);
