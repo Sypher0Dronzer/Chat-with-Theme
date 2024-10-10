@@ -31,7 +31,7 @@ const MessageContainer = () => {
             <div className="flex-column">
 
 			  <p className="font-bold text-opacity-60 capitalize">{selectedConversation.username}</p>
-        <p className={`font text-sm ${isOnline? 'text-secondary-content' : ''}`}>{isOnline? 'online' : 'last seen recently'}</p>
+        <p className={`font-medium text-sm ${isOnline? 'text-secondary-content' : ''}`}>{isOnline? 'online' : 'last seen recently'}</p>
             </div>
           </div>
           <Messages />
