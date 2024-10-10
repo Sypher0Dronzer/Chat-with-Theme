@@ -12,14 +12,17 @@ const Login = () => {
   };
   return (
     <>
+    <div className="mx-auto p-0.5 background-animate bg-gradient-to-r from-primary via-base-content   to-accent card">
     
     <div className="sm:min-w-96 mx-auto card bg-base-300 text-base-300-content relative">
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -z-10 bg-white h-[101%] w-[101%] card"></div>
+    
       <div className="w-full p-6  ">
         <h1 className="sm:text-3xl text-2xl font-semibold text-center ">
           Login{" "}
          
-          <span className="bg-gradient-to-r from-primary via-base-content   to-accent bg-clip-text text-transparent font-bold sm:text-4xl text-3xl">Sora</span>
+          <span className="bg-gradient-to-r from-primary via-base-content   to-accent bg-clip-text text-transparent font-bold sm:text-4xl text-3xl relative ">Sora
+          <span className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2  left-1/2 bg-gradient-to-r from-primary via-base-content to-accent bg-clip-text text-transparent font-bold sm:text-4xl text-3xl brightness-125 blur-md">Sora</span>
+          </span>
          
         </h1>
 
@@ -77,6 +80,7 @@ const Login = () => {
           </div>
         </form>
       </div>
+    </div>
     </div>
     </>
   );
