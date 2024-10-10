@@ -25,4 +25,9 @@ export const useNewUsers = create((set) => ({
       set( ({  loading: false })); // Stop loading
     }
   },
+  setConversations: (newUserData) => {
+    set((state) => ({
+      conversations: [...state.conversations, newUserData], // Append new user to conversations
+    }));
+  },
 }));

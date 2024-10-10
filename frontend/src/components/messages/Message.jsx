@@ -14,9 +14,10 @@ function Message({message}) {
 	// const bubbleBgColor = fromMe 
 	// ? colorVariants[`bubble-user-${theme}`]
 	// : colorVariants[`bubble-friend-${theme}`];
-	const bubbleBgColor = fromMe 
-	? 'bg-secondary text-secondary-content'
-	: 'bg-accent text-accent-content';
+	// const bubbleBgColor = fromMe 
+	// ? 'bg-secondary text-secondary-content'
+	// : 'bg-accent text-accent-content';
+	const bubbleBgColor=''
 
 	const shakeClass= message.shouldShake? "shake" : ""
   return (

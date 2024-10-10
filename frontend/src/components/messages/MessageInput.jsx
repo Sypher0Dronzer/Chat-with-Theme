@@ -79,7 +79,7 @@ const MessageInput = () => {
 
         {/* Emoji Picker */}
         {showEmojiPicker && (
-          <div ref={emojiPickerRef} className="absolute bottom-12 right-14">
+          <div ref={emojiPickerRef} className="absolute bottom-12 sm:right-14">
             <EmojiPicker className="max-w-max" emojiStyle="twemoji"
     searchPlaceholder="Find emoji..." onEmojiClick={handleEmojiClick} />
           </div>

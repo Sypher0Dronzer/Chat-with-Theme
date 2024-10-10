@@ -17,10 +17,11 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #ba0505;
+	background: #242424;
 }
+  
 
-SHAKE ANIMATION ON HORIZONTAL DIRECTION
+/* SHAKE ANIMATION ON HORIZONTAL DIRECTION */
 .shake {
 	animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) 0.2s both;
 	transform: translate3d(0, 0, 0);
@@ -50,3 +51,4 @@ SHAKE ANIMATION ON HORIZONTAL DIRECTION
 		transform: translate3d(4px, 0, 0);
 	}
 }
+
