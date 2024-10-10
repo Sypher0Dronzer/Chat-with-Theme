@@ -13,12 +13,12 @@ const App = () => {
     authCheck()
   },[])
   if(isLoading) return (
-    <div className="h-screen flex items-center justify-center">
+    <div className="h-[100dvh] flex items-center justify-center">
       <span className="loading loading-spinner loading-lg text-white"></span>
     </div>
   )
   return (
-    <div className=" h-screen bg-base-100 flex items-center justify-center">
+    <div className=" h-[100dvh] bg-base-100 flex items-center justify-center">
       <Routes>
         <Route index element={!user?.success? <Navigate to="/login"/>: <Home/>} />
         <Route path="/login" element={user?.success? <Navigate to="/"/>: <Login/>} />

@@ -24,7 +24,7 @@ const Messages = () => {
   }, [messages, loading]);
 
   return (
-    <div className='px-4 flex-1 overflow-auto'>
+    <div className='px-4 flex-1 overflow-auto scrollbar-hide'>
       {loading &&
         [...Array(3)].map((_, idx) => <MessageSkeleton key={idx} />)}
 

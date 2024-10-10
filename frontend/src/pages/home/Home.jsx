@@ -10,7 +10,7 @@ const Home = () => {
 		getConversations()
 	},[])
 	return (
-		<div className='flex h-screen overflow-hidden w-screen '>
+		<div className='flex h-[100dvh] overflow-hidden w-screen '>
 			<Sidebar />
 			<MessageContainer />
 		</div>
