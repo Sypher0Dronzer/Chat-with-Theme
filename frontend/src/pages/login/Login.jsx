@@ -12,9 +12,9 @@ const Login = () => {
   };
   return (
     <>
-    <div className="mx-auto p-0.5 background-animate bg-gradient-to-r from-primary via-base-content   to-accent card">
+    <div className="mx-auto p-0.5 background-animate bg-gradient-to-r from-primary via-base-content to-accent card">
     
-    <div className="sm:min-w-96 mx-auto card bg-base-300 text-base-300-content relative">
+    <div className="sm:max-w-96 w-[70vw] mx-auto card bg-base-300 text-base-300-content relative">
     
       <div className="w-full p-6  ">
         <h1 className="sm:text-3xl text-2xl font-semibold text-center ">
